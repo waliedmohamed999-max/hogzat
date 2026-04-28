@@ -1,7 +1,12 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { resolveBrand } from "@/lib/brand";
 import { getPublicSystemSettings } from "@/lib/api";
 import "./globals.css";
+
+export const viewport: Viewport = {
+  width: "1440",
+  initialScale: 1,
+};
 
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await getPublicSystemSettings();

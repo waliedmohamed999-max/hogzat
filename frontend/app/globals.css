@@ -18,10 +18,12 @@
 
 html {
   scroll-behavior: smooth;
+  min-width: 1440px;
 }
 
 body {
   margin: 0;
+  min-width: 1440px;
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-arabic), var(--font-inter), sans-serif;
