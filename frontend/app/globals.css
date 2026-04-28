@@ -18,12 +18,12 @@
 
 html {
   scroll-behavior: smooth;
-  min-width: 1440px;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
-  min-width: 1440px;
+  overflow-x: hidden;
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-arabic), var(--font-inter), sans-serif;
@@ -45,6 +45,12 @@ textarea {
 
 img {
   max-width: 100%;
+}
+
+main,
+section,
+div {
+  min-width: 0;
 }
 
 ::selection {
