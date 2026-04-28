@@ -38,8 +38,8 @@ type NavLinkProps = {
 function NavLink({ href, icon: Icon, children, tone = "default" }: NavLinkProps) {
   const className =
     tone === "danger"
-      ? "flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-semibold text-rose-600 transition hover:bg-rose-50"
-      : "flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950";
+      ? "flex shrink-0 items-center gap-3 whitespace-nowrap rounded-lg px-4 py-3 text-sm font-semibold text-rose-600 transition hover:bg-rose-50 lg:shrink"
+      : "flex shrink-0 items-center gap-3 whitespace-nowrap rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950 lg:shrink";
 
   return (
     <Link href={href} prefetch className={className}>
@@ -51,7 +51,7 @@ function NavLink({ href, icon: Icon, children, tone = "default" }: NavLinkProps)
 
 function GroupLabel({ children }: { children: React.ReactNode }) {
   return (
-    <div className="px-4 pt-5 text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">
+    <div className="hidden px-4 pt-5 text-xs font-semibold uppercase tracking-[0.22em] text-slate-400 lg:block">
       {children}
     </div>
   );
@@ -75,9 +75,9 @@ export default async function DashboardLayout({
   return (
     <main className="min-h-screen bg-[#f8f8f6] text-slate-950">
       <Navbar currentUser={currentUser} />
-      <section className="overflow-x-auto px-6 pb-16 pt-36 lg:px-10">
-        <div className="mx-auto grid min-w-[1180px] max-w-[1440px] grid-cols-[300px_minmax(0,1fr)] gap-8">
-          <aside className="sticky top-28 h-fit rounded-lg border border-slate-200 bg-white p-5 shadow-[0_20px_70px_-48px_rgba(15,23,42,0.6)]">
+      <section className="px-4 pb-16 pt-32 sm:px-6 lg:px-10 lg:pt-36">
+        <div className="mx-auto grid max-w-[1440px] gap-6 lg:grid-cols-[300px_minmax(0,1fr)] lg:gap-8">
+          <aside className="h-fit rounded-lg border border-slate-200 bg-white p-4 shadow-[0_20px_70px_-48px_rgba(15,23,42,0.6)] lg:sticky lg:top-28 lg:p-5">
             <div className="flex items-center gap-4 border-b border-slate-100 pb-5">
               <div className="flex size-12 items-center justify-center rounded-lg bg-slate-950 text-white">
                 <UserCircle2 className="size-6" />
@@ -88,7 +88,7 @@ export default async function DashboardLayout({
               </div>
             </div>
 
-            <nav className="mt-4 max-h-[calc(100vh-190px)] space-y-1 overflow-auto pr-1">
+            <nav className="mt-4 flex max-h-[220px] gap-1 overflow-auto pb-1 pr-1 lg:block lg:max-h-[calc(100vh-190px)] lg:space-y-1 lg:pb-0">
               <NavLink href="/dashboard" icon={LayoutDashboard}>الرئيسية</NavLink>
               <NavLink href="/dashboard/profile" icon={UserCircle2}>الملف الشخصي</NavLink>
               <NavLink href="/dashboard/alerts" icon={Bell}>إشعارات النظام</NavLink>
