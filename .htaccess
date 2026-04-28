@@ -1,0 +1,23 @@
+<IfModule mod_negotiation.c>
+    Options -Indexes -MultiViews
+</IfModule>
+
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /DMSRBNB/
+
+    RewriteRule ^index\.php$ - [END]
+
+    # Keep the shim front controller at the project root for app requests.
+    RewriteRule ^$ index.php [END]
+
+    # Serve actual asset files from Laravel's public directory.
+    RewriteCond %{DOCUMENT_ROOT}/DMSRBNB/public_html/public/$1 -f [OR]
+    RewriteCond %{DOCUMENT_ROOT}/DMSRBNB/public_html/public/$1 -d
+    RewriteRule ^(.*)$ public_html/public/$1 [END]
+
+    # Forward all non-file requests to the root shim so Laravel handles routes.
+    RewriteRule ^.*$ index.php [END]
+</IfModule>

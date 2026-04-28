@@ -1,0 +1,40 @@
+# Local archives and deployment bundles
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+deploy/hostinger/labayh-hostinger-final/
+deploy/hostinger/*.zip
+database-dump/
+*.sql
+*.dump
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Dependencies and build output
+node_modules/
+.next/
+vendor/
+public_html/vendor/
+public_html/composer.phar
+public_html/bootstrap/cache/*.php
+public_html/bootstrap/cache/*.tmp
+public_html/storage/logs/*.log
+error_log
+**/error_log
+public_html/storage/framework/cache/data/*
+public_html/storage/framework/sessions/*
+public_html/storage/framework/views/*.php
+frontend/.next/
+frontend/node_modules/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/

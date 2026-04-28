@@ -1,0 +1,17 @@
+/node_modules
+/public/storage
+/storage/*.key
+/vendor
+.env
+.idea/*
+webpack.mix.js
+yarn.lock
+storage/installed
+.idea/modules.xml
+.idea/php.xml
+storage/imported
+public/caching/
+public/addons/
+app/Addons/
+prepros.config
+storage/logs/

@@ -1,0 +1,76 @@
+import 'package:flutter/material.dart';
+
+IconData mapIcon(String name) {
+  switch (name) {
+    case 'person':
+      return Icons.person_outline;
+    case 'security':
+      return Icons.shield_outlined;
+    case 'privacy':
+      return Icons.privacy_tip_outlined;
+    case 'notifications':
+      return Icons.notifications_outlined;
+    case 'payments':
+      return Icons.account_balance_wallet_outlined;
+    case 'tax':
+      return Icons.receipt_long_outlined;
+    case 'language':
+      return Icons.language;
+    case 'work':
+      return Icons.work_outline;
+    case 'accessibility':
+      return Icons.accessibility_new_outlined;
+    case 'legal':
+      return Icons.description_outlined;
+    case 'help':
+      return Icons.help_outline;
+    case 'logout':
+      return Icons.logout;
+    case 'document':
+      return Icons.description_outlined;
+    case 'policy':
+      return Icons.policy_outlined;
+    case 'code':
+      return Icons.code_outlined;
+    case 'shield':
+      return Icons.shield_outlined;
+    case 'flag':
+      return Icons.flag_outlined;
+    case 'megaphone':
+      return Icons.campaign_outlined;
+    case 'house':
+      return Icons.home_outlined;
+    case 'balloon':
+      return Icons.flight_takeoff_outlined;
+    case 'service':
+      return Icons.room_service_outlined;
+    case 'bed':
+      return Icons.bed_outlined;
+    case 'wifi':
+      return Icons.wifi;
+    case 'kitchen':
+      return Icons.kitchen_outlined;
+    case 'parking':
+      return Icons.local_parking_outlined;
+    case 'camera':
+      return Icons.videocam_outlined;
+    case 'map':
+      return Icons.map_outlined;
+    case 'calendar':
+      return Icons.calendar_today_outlined;
+    case 'warning':
+      return Icons.warning_amber_outlined;
+    case 'key':
+      return Icons.key_outlined;
+    case 'star':
+      return Icons.star_border;
+    case 'settings':
+      return Icons.settings_outlined;
+    case 'question':
+      return Icons.help_outline;
+    case 'arrow':
+      return Icons.chevron_left;
+    default:
+      return Icons.circle_outlined;
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "identity": {},
+  "colors": {},
+  "content": {},
+  "contact": {},
+  "social": {},
+  "footer": {},
+  "analytics": {},
+  "technical": {
+    "technical": {
+      "domain": "https://labayh.com",
+      "smtpProvider": "SMTP",
+      "smtpHost": "",
+      "smtpPort": "587",
+      "smtpUser": "",
+      "smtpPassword": "",
+      "fromName": "Labayh",
+      "fromEmail": "",
+      "storageProvider": "Local",
+      "uploadMaxSize": "5MB",
+      "uploadExtensions": [
+        "jpg",
+        "png",
+        "webp",
+        "pdf"
+      ],
+      "maxImages": "20"
+    }
+  },
+  "cities": [
+    {
+      "id": "riyadh",
+      "nameAr": "الرياض",
+      "nameEn": "Riyadh",
+      "country": "السعودية",
+      "active": true,
+      "featured": true,
+      "listings": 128
+    },
+    {
+      "id": "jeddah",
+      "nameAr": "جدة",
+      "nameEn": "Jeddah",
+      "country": "السعودية",
+      "active": true,
+      "featured": true,
+      "listings": 96
+    }
+  ]
+}true,
+      "listings": 128
+    },
+    {
+      "id": "jeddah",
+      "nameAr": "جدة",
+      "nameEn": "Jeddah",
+      "country": "السعودية",
+      "active": true,
+      "featured": true,
+      "listings": 96
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+<?php
+
+include("../../include/config.php");
+mysqli_query($mysqli,"SET NAMES 'utf8'");
+
+$auth_key = $_POST['auth_key'];
+//$pattern = "/aSdFgHjKl12345678dfe34asAFS$%^sfsdfcxjhASFCX90QwErT@/i";
+
+if($auth_key == "aSdFgHjKl12345678dfe34asAFS%^sfsdfcxjhASFCX90QwErT@") {
+    
+$id_ads = $_POST['id_ads'];
+$views = $_POST['views']; 
+
+$sql = "
+UPDATE `smartend_ads` SET `views` = '".$views."' WHERE `smartend_ads`.`id` = '".$id_ads."';  
+";
+
+if (mysqli_query($mysqli, $sql)) {
+
+     // echo "Done";
+    
+} else {
+      //echo "Error: " . $sql . "<br>" . mysqli_error($mysqli);
+
+    
+}
+
+}else {
+    
+}
+
+?>

@@ -1,0 +1,7 @@
+.next
+node_modules
+dist
+.env*
+!.env.example
+!.env.production.example
+*.log
