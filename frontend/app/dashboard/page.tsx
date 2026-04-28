@@ -137,7 +137,7 @@ export default async function DashboardPage() {
   ];
 
   return (
-    <div dir="rtl" className="max-w-full space-y-6 overflow-hidden font-[Cairo]">
+    <div dir="rtl" className="max-w-full space-y-6 font-[Cairo]">
       <section className="overflow-hidden rounded-3xl border border-slate-100 bg-[#1a1f36] text-white shadow-[0_28px_90px_-48px_rgba(15,23,42,0.8)]">
         <div className="relative p-5 sm:p-6 lg:p-8">
           <div className="absolute left-8 top-8 hidden rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-xs font-bold text-white/70 lg:block">

@@ -38,8 +38,8 @@ type NavLinkProps = {
 function NavLink({ href, icon: Icon, children, tone = "default" }: NavLinkProps) {
   const className =
     tone === "danger"
-      ? "flex shrink-0 items-center gap-3 whitespace-nowrap rounded-lg px-4 py-3 text-sm font-semibold text-rose-600 transition hover:bg-rose-50 lg:shrink"
-      : "flex shrink-0 items-center gap-3 whitespace-nowrap rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950 lg:shrink";
+      ? "flex min-w-0 items-center justify-center gap-2 rounded-lg px-3 py-3 text-center text-xs font-semibold text-rose-600 transition hover:bg-rose-50 lg:justify-start lg:gap-3 lg:px-4 lg:text-right lg:text-sm"
+      : "flex min-w-0 items-center justify-center gap-2 rounded-lg px-3 py-3 text-center text-xs font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950 lg:justify-start lg:gap-3 lg:px-4 lg:text-right lg:text-sm";
 
   return (
     <Link href={href} prefetch className={className}>
@@ -75,7 +75,7 @@ export default async function DashboardLayout({
   return (
     <main className="dashboard-shell min-h-screen bg-[#f8f8f6] text-slate-950">
       <Navbar currentUser={currentUser} />
-      <section className="px-4 pb-16 pt-32 sm:px-6 lg:px-10 lg:pt-36">
+      <section className="px-3 pb-16 pt-28 sm:px-6 lg:px-10 lg:pt-36">
         <div className="mx-auto grid max-w-[1440px] gap-6 lg:grid-cols-[300px_minmax(0,1fr)] lg:gap-8">
           <aside className="h-fit overflow-hidden rounded-lg border border-slate-200 bg-white p-4 shadow-[0_20px_70px_-48px_rgba(15,23,42,0.6)] lg:sticky lg:top-28 lg:p-5">
             <div className="flex items-center gap-4 border-b border-slate-100 pb-5">
@@ -88,7 +88,7 @@ export default async function DashboardLayout({
               </div>
             </div>
 
-            <nav className="mt-4 flex max-h-[96px] gap-1 overflow-x-auto overflow-y-hidden pb-1 pr-1 scrollbar-hide lg:block lg:max-h-[calc(100vh-190px)] lg:space-y-1 lg:overflow-auto lg:pb-0">
+            <nav className="mt-4 grid max-h-[240px] grid-cols-3 gap-1 overflow-y-auto pb-1 pr-1 scrollbar-hide lg:block lg:max-h-[calc(100vh-190px)] lg:space-y-1 lg:overflow-auto lg:pb-0">
               <NavLink href="/dashboard" icon={LayoutDashboard}>الرئيسية</NavLink>
               <NavLink href="/dashboard/profile" icon={UserCircle2}>الملف الشخصي</NavLink>
               <NavLink href="/dashboard/alerts" icon={Bell}>إشعارات النظام</NavLink>

@@ -84,10 +84,18 @@ div {
   .dashboard-shell a,
   .dashboard-shell button {
     overflow-wrap: anywhere;
+    white-space: normal;
   }
 
   .dashboard-shell table {
     width: max-content;
+  }
+
+  .dashboard-shell pre,
+  .dashboard-shell code,
+  .dashboard-shell table,
+  .dashboard-shell table * {
+    white-space: revert;
   }
 
   .dashboard-shell .fixed.left-6 {
