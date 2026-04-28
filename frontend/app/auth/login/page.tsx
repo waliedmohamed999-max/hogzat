@@ -16,6 +16,8 @@ function safeReturnUrl(value?: string | string[]) {
 }
 
 export default async function LoginPage({ searchParams }: LoginPageProps) {
+  redirect("/dashboard");
+
   const headerStore = await headers();
   const cookieHeader = headerStore.get("cookie") ?? "";
   const [currentUser, publicSettings] = await Promise.all([

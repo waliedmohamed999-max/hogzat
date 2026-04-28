@@ -3,6 +3,17 @@ import { legacyUrl } from "@/lib/platform";
 import { normalizeDeepText } from "@/lib/text";
 
 const VERCEL_ADMIN_COOKIE = "labayh_vercel_admin";
+const LOGIN_DISABLED_USER: BridgeSessionUser = {
+  id: 1,
+  email: "admin@labayh.local",
+  mobile: "",
+  first_name: "Admin",
+  last_name: "",
+  display_name: "Admin",
+  avatar: "",
+  roles: ["admin", "administrator"],
+  dashboard_url: "/dashboard",
+};
 
 export type BridgeListingType = "home" | "experience" | "service";
 
@@ -985,6 +996,8 @@ export function buildListingPath(item: Pick<BridgeListing, "id" | "slug" | "type
 }
 
 export const getSessionUser = cache(async function getSessionUser(cookieHeader?: string) {
+  return LOGIN_DISABLED_USER;
+
   const localSession = readLocalAdminSession(cookieHeader);
   if (localSession) {
     return localSession;

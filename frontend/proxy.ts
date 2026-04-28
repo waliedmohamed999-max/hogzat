@@ -3,6 +3,17 @@ import { NextRequest, NextResponse } from "next/server";
 const CSRF_COOKIE_NAME = "labayh_csrf";
 const DASHBOARD_SESSION_HEADER = "x-labayh-session";
 const VERCEL_ADMIN_COOKIE = "labayh_vercel_admin";
+const LOGIN_DISABLED_SESSION = {
+  id: 1,
+  email: "admin@labayh.local",
+  mobile: "",
+  first_name: "Admin",
+  last_name: "",
+  display_name: "Admin",
+  avatar: "",
+  roles: ["admin", "administrator"],
+  dashboard_url: "/dashboard",
+};
 const DEFAULT_LEGACY_BASE_URL = "http://127.0.0.1:8000";
 const PROTECTED_PREFIXES = ["/api/v1/dashboard", "/api/bookings", "/api/finance"];
 const ADMIN_PREFIXES = ["/api/admin", "/api/settings", "/api/seo"];
@@ -44,6 +55,8 @@ function encodeSessionHeader(session: unknown) {
 }
 
 async function getSession(request: NextRequest) {
+  return LOGIN_DISABLED_SESSION;
+
   const localSession = readLocalAdminSession(request.cookies.get(VERCEL_ADMIN_COOKIE)?.value);
   if (localSession) {
     return localSession;
